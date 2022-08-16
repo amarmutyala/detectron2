@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu18.04
+FROM nvidia/cuda:11.2.1-cudnn8-devel-ubuntu20.04
 # use an older system (18.04) to avoid opencv incompatibility (issue#3524)
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -42,6 +42,6 @@ WORKDIR /home/appuser/detectron2_repo
 # run detectron2 under user "appuser":
 # wget http://images.cocodataset.org/val2017/000000439715.jpg -O input.jpg
 # python3 demo/demo.py  \
-	#--config-file configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml \
-	#--input input.jpg --output outputs/ \
-	#--opts MODEL.WEIGHTS detectron2://COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x/137849600/model_final_f10217.pkl
+# 	--config-file configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml \
+# 	--input input.jpg --output outputs/ \
+# 	--opts MODEL.WEIGHTS detectron2://COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x/137849600/model_final_f10217.pkl

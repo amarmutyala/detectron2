@@ -18,9 +18,11 @@ services:
       stack: 67108864
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - C:/Users/manzz/Desktop/workspace:/home/workspace
     environment:
       - DISPLAY=$DISPLAY
       - NVIDIA_VISIBLE_DEVICES=all
     # Uncomment with proper source to access webcam from docker
     # devices: 
     #   - /dev/video0:/dev/video0
+    tty: true
